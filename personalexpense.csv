@@ -1,45 +1,45 @@
 Expense,Category,Source,Price,Date
-Tricycle,Fare,Public Transportation,20,9/19/2026
-Cab,Fare,Public Transportation,13,9/19/2026
-Coffee,Drinks,School Cafeteria,15,9/19/2026
-Egg,Food,Convenient Store,10,9/19/2026
-T-shirt,Clothes,Online Shop,157,9/19/2026
-Tricycle,Fare,Public Transportation,15,9/18/2026
-Ka-Joel's,Food,Restaurant,150,9/18/2026
-Cab,Fare,Public Transportation,12,9/18/2026
-Cab,Fare,Public Transportation,15,9/18/2026
-Shampoo,Hygiene,Convenient Store,10,9/17/2026
-Egg,Food,Convenient Store,10,9/17/2026
-Tricycle,Fare,Public Transportation,15,9/17/2026
-Necklace,Accessories,Online Shop,50,9/17/2026
-Siomai Rice,Food,School Cafeteria,35,9/17/2026
-C2 ,Drinks,School Cafeteria,18,9/17/2026
-Malt drink,Drinks,Grocery Store,100,9/17/2026
-Shampoo,Hygiene,Grocery Store,30,9/17/2026
-Soap,Hygiene,Grocery Store,20,9/17/2026
-Cab,Fare,Public Transportation,12,9/17/2026
-Fish,Food,Market,120,9/17/2026
-Tricycle,Fare,Public Transportation,15,9/16/2026
-Fruits,Food,Market,30,9/16/2026
-Coffee,Drinks,Convenient Store,17,9/16/2026
-Tricycle,Fare,Public Transportation,15,9/15/2026
-Coffee,Drinks,School Cafeteria,15,9/15/2026
-Siomai Rice,Food,School Cafeteria,35,9/15/2026
-Cab,Fare,School Cafeteria,13,9/15/2026
-Juice,Drinks,Street Vendor,10,9/15/2026
-Street Food,Food,Street Vendor,20,9/15/2026
-Tricycle,Fare,Public Transportation,15,9/14/2026
-Siomai Rice,Food,School Cafeteria,35,9/14/2026
-Soft Drink,Drinks,School Cafeteria,25,9/14/2026
-Street Food,Food,Street Vendor,20,9/14/2026
-Juice,Drinks,Street Vendor,10,9/14/2026
-Cab,Fare,Public Transportation,12,9/14/2026
-Cab,Fare,Public Transportation,12,9/13/2026
-Skirt,Clothes,Thrift Store,80,9/13/2026
-Blouse,Clothes,Thrift Store,80,9/13/2026
-Bracelet,Accessories,Thrift Store,50,9/13/2026
-Potato Chips,Foods,Convenient Store,20,9/13/2026
-Fabcon,Laundry,Convenient Store,10,9/12/2026
-Coffee,Drinks,Convenient Store,10,9/12/2026
-Siomai Rice,Food,Convenient Store,35,9/12/2026
-Detergent Powder,Laundry,Convenient Store,10,9/12/2026
+Tricycle,Fare,Public Transportation,20.0,2026-09-19
+Cab,Fare,Public Transportation,13.0,2026-09-19
+Coffee,Drinks,School Cafeteria,15.0,2026-09-19
+Egg,Food,Convenient Store,10.0,2026-09-19
+T-shirt,Clothes,Online Shop,157.0,2026-09-19
+Tricycle,Fare,Public Transportation,15.0,2026-09-18
+Ka-Joel's,Food,Restaurant,150.0,2026-09-18
+Cab,Fare,Public Transportation,12.0,2026-09-18
+Cab,Fare,Public Transportation,15.0,2026-09-18
+Shampoo,Hygiene,Convenient Store,10.0,2026-09-17
+Egg,Food,Convenient Store,10.0,2026-09-17
+Tricycle,Fare,Public Transportation,15.0,2026-09-17
+Necklace,Accessories,Online Shop,50.0,2026-09-17
+Siomai Rice,Food,School Cafeteria,35.0,2026-09-17
+C2 ,Drinks,School Cafeteria,18.0,2026-09-17
+Malt drink,Drinks,Grocery Store,100.0,2026-09-17
+Shampoo,Hygiene,Grocery Store,30.0,2026-09-17
+Soap,Hygiene,Grocery Store,20.0,2026-09-17
+Cab,Fare,Public Transportation,12.0,2026-09-17
+Fish,Food,Market,120.0,2026-09-17
+Tricycle,Fare,Public Transportation,15.0,2026-09-16
+Fruits,Food,Market,30.0,2026-09-16
+Coffee,Drinks,Convenient Store,17.0,2026-09-16
+Tricycle,Fare,Public Transportation,15.0,2026-09-15
+Coffee,Drinks,School Cafeteria,15.0,2026-09-15
+Siomai Rice,Food,School Cafeteria,35.0,2026-09-15
+Cab,Fare,School Cafeteria,13.0,2026-09-15
+Juice,Drinks,Street Vendor,10.0,2026-09-15
+Street Food,Food,Street Vendor,20.0,2026-09-15
+Tricycle,Fare,Public Transportation,15.0,2026-09-14
+Siomai Rice,Food,School Cafeteria,35.0,2026-09-14
+Soft Drink,Drinks,School Cafeteria,25.0,2026-09-14
+Street Food,Food,Street Vendor,20.0,2026-09-14
+Juice,Drinks,Street Vendor,10.0,2026-09-14
+Cab,Fare,Public Transportation,12.0,2026-09-14
+Cab,Fare,Public Transportation,12.0,2026-09-13
+Skirt,Clothes,Thrift Store,80.0,2026-09-13
+Blouse,Clothes,Thrift Store,80.0,2026-09-13
+Bracelet,Accessories,Thrift Store,50.0,2026-09-13
+Potato Chips,Foods,Convenient Store,20.0,2026-09-13
+Fabcon,Laundry,Convenient Store,10.0,2026-09-12
+Coffee,Drinks,Convenient Store,10.0,2026-09-12
+Siomai Rice,Food,Convenient Store,35.0,2026-09-12
+Detergent Powder,Laundry,Convenient Store,10.0,2026-09-12
