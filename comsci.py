@@ -68,7 +68,7 @@ with cb1:
     day_ave = day_tots.mean()
     st.write(f"""
     #### Average Expense per Day:
-    <h2 style="background-color: #384157"> ₱{day_ave:,.2f}</h2>
+    <h2 style="background-color: #212F19"> ₱{day_ave:,.2f}</h2>
     """, unsafe_allow_html=True)
 
 with cb2:
@@ -76,7 +76,7 @@ with cb2:
     month_ave = monthly_total.mean()
     st.write(f"""
     #### Average Expense per Month:
-    <h2 style="background-color: #384157"> ₱{month_ave:,.2f}</h2>
+    <h2 style="background-color: #212F19"> ₱{month_ave:,.2f}</h2>
     """, unsafe_allow_html=True)
 
 ########################################## AVE PER COLUMN ##########################################
@@ -96,7 +96,7 @@ with ca1:
     cgry = st.selectbox("Select Category", data["Category"].unique())
     cgry_ave = (data[data["Category"] == cgry].groupby("Category")["Price"].sum()).mean()
     st.write(f"""
-    <h2 style="background-color: #384157"> ₱{cgry_ave:,.2f}</h2>
+    <h2 style="background-color: #212F19"> ₱{cgry_ave:,.2f}</h2>
     """, unsafe_allow_html=True)
 
 ########################################## SOURCE ##########################################
@@ -104,7 +104,7 @@ with ca2:
     srcs = st.selectbox("Select Source", data["Source"].unique())
     srcs_ave = (data[data["Source"] == srcs].groupby("Source")["Price"].sum()).mean()
     st.write(f"""
-    <h2 style="background-color: #384157"> ₱{srcs_ave:,.2f}</h2>
+    <h2 style="background-color: #212F19"> ₱{srcs_ave:,.2f}</h2>
     """, unsafe_allow_html=True)
 
 ########################################## AVE BETWEEN DATES ##########################################
