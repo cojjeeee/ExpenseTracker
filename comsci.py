@@ -233,7 +233,7 @@ if menu == "🏠 Dashboard":
     st.divider()
 
     # -----------------------------------------------------
-    # BUDGET PROGRESS
+    # BUDGET PROGRESS - features
     # -----------------------------------------------------
 
     st.markdown(
@@ -670,10 +670,10 @@ elif menu == "💰 Budget":
 
         if std_price > 0:
 
-            highest_z = (
-                highest_expense - mean_price
-            ) / std_price
-
+            highest_z = stats.zscore(expense_prices)[
+                np.argmax(expense_prices)
+            ]
+            
             if highest_z >= 2:
 
                 st.warning(
