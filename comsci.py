@@ -4,9 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 
-# =========================================================
-# PAGE CONFIGURATION
-# =========================================================
+############################# PAGE CONFIG #############################
 
 st.set_page_config(
     page_title="XTrack - Student Expense Tracker",
@@ -14,9 +12,9 @@ st.set_page_config(
     layout="wide"
 )
 
-# =========================================================
-# CUSTOM CSS
-# =========================================================
+############################# CSS #############################
+############################# CSS #############################
+############################# CSS #############################
 
 st.markdown("""
 <style>
@@ -70,32 +68,30 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# =========================================================
-# LOAD DATA
-# =========================================================
+############################# LOAD DATA #############################
+############################# LOAD DATA #############################
+############################# LOAD DATA #############################
 
 data = pd.read_csv("personalexpense.csv")
 
-# Convert Date into datetime
 data["Date"] = pd.to_datetime(data["Date"], format="mixed")
 
-# Make sure Price is numeric
 data["Price"] = pd.to_numeric(data["Price"], errors="coerce")
 
-# Remove invalid rows if there are any
 data = data.dropna(subset=["Price", "Date"])
 
-# Clean category names
+
 data["Category"] = data["Category"].replace({
     "Foods": "Food"
 })
 
 
-# =========================================================
-# SIDEBAR
-# =========================================================
+############################# SIDEBAR #############################
+############################# SIDEBAR #############################
+############################# SIDEBAR #############################
 
-st.sidebar.title("💰 XTrack")
+
+st.sidebar.image("xtrack_banner.jpg")
 
 st.sidebar.write("Student Expense Tracker")
 
@@ -113,7 +109,6 @@ menu = st.sidebar.radio(
 
 st.sidebar.divider()
 
-# Budget input
 budget = st.sidebar.number_input(
     "Monthly Budget",
     min_value=0.0,
@@ -122,22 +117,15 @@ budget = st.sidebar.number_input(
 )
 
 
-# =========================================================
-# BASIC CALCULATIONS
-# =========================================================
+############################# BASIC CALC #############################
+############################# BASIC CALC #############################
+############################# BASIC CALC #############################
 
-# NumPy is used for numerical calculations
 total_expense = np.sum(data["Price"])
-
 average_expense = np.mean(data["Price"])
-
 highest_expense = np.max(data["Price"])
-
 lowest_expense = np.min(data["Price"])
-
 number_of_expenses = len(data)
-
-# Current month
 current_month = data["Date"].max().to_period("M")
 
 monthly_data = data[
@@ -146,22 +134,21 @@ monthly_data = data[
 
 monthly_total = np.sum(monthly_data["Price"])
 
-# Remaining budget
 remaining_budget = budget - monthly_total
 
-# Budget percentage
 if budget > 0:
     budget_percentage = (monthly_total / budget) * 100
 else:
     budget_percentage = 0
 
 
-# =========================================================
-# DASHBOARD
-# =========================================================
+############################# DASHBOARD PAGE #############################
+############################# DASHBOARD PAGE #############################
+############################# DASHBOARD PAGE #############################
 
 if menu == "🏠 Dashboard":
 
+    st.image("xtrack_banner.jpg")
     st.markdown(
         '<p class="main-title">💰 XTrack</p>',
         unsafe_allow_html=True
@@ -174,9 +161,7 @@ if menu == "🏠 Dashboard":
         unsafe_allow_html=True
     )
 
-    # -----------------------------------------------------
-    # SUMMARY CARDS
-    # -----------------------------------------------------
+############################# SUMMARY BOXES #############################
 
     c1, c2, c3, c4 = st.columns(4)
 
@@ -232,9 +217,8 @@ if menu == "🏠 Dashboard":
 
     st.divider()
 
-    # -----------------------------------------------------
-    # BUDGET PROGRESS - features
-    # -----------------------------------------------------
+############################# BUDGET PROGRESS #############################
+
 
     st.markdown(
         '<div class="section-title">💳 Monthly Budget</div>',
@@ -262,9 +246,7 @@ if menu == "🏠 Dashboard":
     else:
         st.success("✅ Your spending is currently within your budget.")
 
-    # -----------------------------------------------------
-    # CATEGORY SUMMARY
-    # -----------------------------------------------------
+############################# CATEGORY SUMMARY #############################
 
     st.markdown(
         '<div class="section-title">📊 Expense by Category</div>',
@@ -294,9 +276,7 @@ if menu == "🏠 Dashboard":
         use_container_width=True
     )
 
-    # -----------------------------------------------------
-    # RECENT EXPENSES
-    # -----------------------------------------------------
+############################# RECENT EXPENSES #############################
 
     st.markdown(
         '<div class="section-title">🧾 Recent Expenses</div>',
@@ -314,22 +294,20 @@ if menu == "🏠 Dashboard":
         use_container_width=True
     )
 
-
-# =========================================================
-# EXPENSES PAGE
-# =========================================================
+############################# EXPENSES PAGE #############################
+############################# EXPENSES PAGE #############################
+############################# EXPENSES PAGE #############################
 
 elif menu == "🧾 Expenses":
 
+    st.image("xtrack_banner.jpg")
     st.title("🧾 Expense Records")
-
     st.write(
         "Add, view, and remove your personal expense records."
     )
 
-    # -----------------------------------------------------
-    # ADD EXPENSE
-    # -----------------------------------------------------
+############################# ADD EXP #############################
+
 
     st.subheader("➕ Record New Expense")
 
@@ -414,9 +392,8 @@ elif menu == "🧾 Expenses":
 
     st.divider()
 
-    # -----------------------------------------------------
-    # DELETE EXPENSE
-    # -----------------------------------------------------
+############################# DELETE EXP #############################
+
 
     st.subheader("🗑️ Manage Expenses")
 
@@ -450,21 +427,20 @@ elif menu == "🧾 Expenses":
         st.rerun()
 
 
-# =========================================================
-# ANALYTICS PAGE
-# =========================================================
+############################# ANALYTICS PAGE #############################
+############################# ANALYTICS PAGE #############################
+############################# ANALYTICS PAGE #############################
 
 elif menu == "📊 Analytics":
 
+    st.image("xtrack_banner.jpg")
     st.title("📊 Expense Analytics")
-
     st.write(
         "Analyze how your money is being spent."
     )
 
-    # -----------------------------------------------------
-    # TOTAL AND PERCENTAGE
-    # -----------------------------------------------------
+############################# TOTAL AND PERC #############################
+
 
     st.subheader("💸 Expense Distribution")
 
@@ -499,9 +475,8 @@ elif menu == "📊 Analytics":
             use_container_width=True
         )
 
-    # -----------------------------------------------------
-    # MATPLOTLIB CATEGORY CHART
-    # -----------------------------------------------------
+############################# CATEGORY CHART #############################
+
 
     with c2:
 
@@ -527,9 +502,8 @@ elif menu == "📊 Analytics":
 
         plt.close(fig)
 
-    # -----------------------------------------------------
-    # DAILY SPENDING
-    # -----------------------------------------------------
+############################# DAILY EXP #############################
+
 
     st.subheader("📅 Daily Spending Trend")
 
@@ -560,21 +534,20 @@ elif menu == "📊 Analytics":
     plt.close(fig)
 
 
-# =========================================================
-# BUDGET PAGE
-# =========================================================
+############################# BUDGET PAGE #############################
+############################# BUDGET PAGE #############################
+############################# BUDGET PAGE #############################
 
 elif menu == "💰 Budget":
 
+    st.image("xtrack_banner.jpg")
     st.title("💰 Budget Tracker")
-
     st.write(
         "Monitor your spending against your available budget."
     )
 
-    # -----------------------------------------------------
-    # BUDGET SUMMARY
-    # -----------------------------------------------------
+############################# SUMMARY #############################
+
 
     c1, c2, c3 = st.columns(3)
 
@@ -599,9 +572,7 @@ elif menu == "💰 Budget":
 
     st.divider()
 
-    # -----------------------------------------------------
-    # BUDGET PROGRESS
-    # -----------------------------------------------------
+############################# BUDGET PROGRESS #############################
 
     st.subheader("📊 Budget Usage")
 
@@ -635,9 +606,8 @@ elif menu == "💰 Budget":
             "✅ You are within your budget."
         )
 
-    # -----------------------------------------------------
-    # TOP EXPENSE
-    # -----------------------------------------------------
+############################# TOP EXPENSE #############################
+
 
     st.subheader("💸 Highest Expense")
 
@@ -651,9 +621,8 @@ elif menu == "💰 Budget":
         f"({highest_row['Category']})"
     )
 
-    # -----------------------------------------------------
-    # SCIPY ANALYSIS
-    # -----------------------------------------------------
+############################# SCIPY ANALYSIS #############################
+
 
     st.subheader("🔎 Spending Pattern Analysis")
 
